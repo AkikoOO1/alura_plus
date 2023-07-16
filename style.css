@@ -1,0 +1,161 @@
+:root{  /*Váriaveis de cores*/
+    --Branco: #FFFFFF;
+    --Cinza: #C0C0C0;
+    --Botão-Azul: #167BF7;
+    --Fundo: #00030C;
+    --Efeito-do-botão: rgb(3, 79, 122);
+    --Fonte-pricipal: 'Inter';
+}
+
+body { /*É o pai de todos os elementos, por isso que o que colocar nele irá funcionar nos outros*/
+    background-color: var(--Fundo);
+    color: var(--Branco);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--Fonte-pricipal);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Principal{
+    background-image: url("Imagens/Background.png");
+    background-repeat: no-repeat; /*A imagem não irá repetir*/
+    background-size: contain;
+    align-items: center;
+    text-align: center;
+}
+
+.Container{
+    height: 100vh;  /*VH seria a altura do nosso dispositivo, em outras palavras ele pega a informação e faz a imagem ocupar todo ele*/
+    display: grid;
+    grid-template-columns: 50% 50% ;
+}
+
+.Container__Botão{ 
+    background-color: var(--Botão-Azul);
+    color: var(--Branco);
+    border-radius: 5px;
+    padding: 1em;
+    display: block;
+    text-decoration: none;  
+    margin-bottom: 1em;
+}
+
+.Segundo_Botão{
+    background-color: transparent; /**Deixou o fundo transparente com esse elemento*/
+    border: 2px solid var(--Branco); 
+}
+
+.Container__Aviso{
+    color:var(--Cinza);
+    font-size: 12px;
+}
+
+.Container__título{ /*Colocou e ssa class lá no html pois será usada em varias vezes*/
+    font-size: 28px;
+    font-weight: 700; /*É o peso que a letra tem*/
+}
+
+.Container__Imagem{ 
+    margin: 1em 0 2em 0;
+}
+
+.Container__Caixa{
+    margin: 0 6em;
+}
+
+.Secundário__Img{
+    width: 80;
+}
+
+.Segundário{
+    align-items: center;
+    margin: 0 10em; 
+}
+
+.Descrição_Títuo{
+    font-weight: 700; /*É o peso da letra*/
+    font-size: 48px;
+    color: var(--Branco);
+    margin-bottom: 0.1em;
+}
+
+.Descrição_texto{
+    color: var(--Cinza);
+}
+
+.secundário__botão{
+    display: inline-block; /*Nesse caso em vez de ocupar a linha toda, ele está ocupando somente um tamanho necessário, porém se fosse colocar algum elemento a mais ele iria ficar na frente, e não embaixo como é de costume*/
+    margin-top: 1em;
+}
+
+.Container__Descrição{
+    padding: 2em;
+}
+
+.Dispositivo__Listas{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.Dispositivos{
+    text-align: center;
+}
+
+.Dispositivos__título{
+    font-size: 48px;
+    color: var(--Branco);
+}
+
+.Lista__item{
+    font-size: 32px;
+    color: var(--Branco);
+}
+
+.Roda-pé{
+    text-align: center;
+    margin:5em 3em; /*Esse ajudou a distanciar o final da página*/
+}
+
+.Rodapé__Listas{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 1em;
+    list-style-type: none;
+}
+
+.Lista__Link a{
+    color: var(--Branco);
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 1em; /*É o espaçamento a esquerda*/
+}
+
+.Roda-pé__Texto{
+    color: var(--Cinza);
+    font-size:14px;
+    padding: 1em 15px;
+}
+
+.Lista__Link a:hover{ /*Esse #houver# fez a animação quando nós passarmos o mouse em cima ele alterar a cor*/
+    color: rgb(51, 186, 204);
+}
+
+.Lista__Link a:active{ /*Esse #active# faz a animação do link mudar de cor quando nos clicamos nele*/
+    color: rgb(173, 135, 123);
+}
+
+.Container__Botão:hover{
+    background-color: var(--Efeito-do-botão);
+    color: var(--Fundo);
+}
+
+.Segundo_Botão:hover{
+    background-color: rgba(30, 211, 235, 0.514);
+    color: var(--Fundo);
+}
